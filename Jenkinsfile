@@ -6,15 +6,12 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
+            agent {
+                label 'master'
+            }
             steps {
                 echo 'Cloning...'
-                // Use withCredentials to provide GitHub credentials
-                withCredentials([usernamePassword(credentialsId: 'CindyKatoni', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    script {
-                        // Clone the private GitHub repository using the provided credentials
-                        git credentialsId: 'CindyKatoni', url: "https://github.com/CindyKatoni/DevopsBasics.git"
-                    }
-                }
+                git 'https://github.com/CindyKatoni/DevopsBasics.git'
             }
         }
         stage('Compile') {
