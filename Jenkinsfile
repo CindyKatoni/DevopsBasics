@@ -9,7 +9,7 @@ stage('Checkout') {
 steps {
 echo 'cloning..'
 // Use withCredentials to provide GitHub credentials
-withCredentials([usernamePassword(credentialsId: 'theitern',
+withCredentials([usernamePassword(credentialsId: 'CindyKatoni',
 usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 script {
 // Clone the private GitHub repository using the provided
