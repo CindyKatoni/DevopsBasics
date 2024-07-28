@@ -6,9 +6,6 @@ pipeline {
     agent any
     stages {
         stage('Checkout') {
-            agent {
-                label 'master'
-            }
             steps {
                 echo 'Cloning...'
                 git 'https://github.com/CindyKatoni/DevopsBasics.git'
