@@ -14,8 +14,8 @@ usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
 script {
 // Clone the private GitHub repository using the provided
 credentials
-git credentialsId: 'theitern', url:
-"https://github.com/theitern/DevopsBasics.git"
+git credentialsId: 'CindyKatoni', url:
+"https://github.com/CindyKatoni/DevopsBasics.git"
 }
 }
 }
